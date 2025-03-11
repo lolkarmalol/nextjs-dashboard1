@@ -1,5 +1,5 @@
 export default function InvoicesPage(){
     return (
-        <p>Invoices Page</p>
+        <p>Invoices t Page</p>
     );
 }
