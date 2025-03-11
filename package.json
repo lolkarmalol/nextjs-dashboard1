@@ -3,8 +3,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --turbopack",
-    "start": "next start",
-    "route": "node -r dotenv/config ./app/seed/route.ts"
+    "start": "next start"
     },
 
   "dependencies": {
