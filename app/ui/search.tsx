@@ -1,3 +1,4 @@
+"@neofetch"
 "use client";
 
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
@@ -13,15 +14,18 @@ export default function Search({ placeholder }: { placeholder: string }) {
 
   const hendleSearch = useDebouncedCallback((term: string) => {
     const params = new URLSearchParams(searchParams);
+    params.set('page', '1')
+
     if (term) {
       params.set('query', term)
     } else {
       params.delete('query')
     }
 
-    params.set('page', '1')
+
 
     replace(`${pathname}?${params.toString()}`)
+
   }, WAIT_BETWEEN_CHANGE)
 
   return (

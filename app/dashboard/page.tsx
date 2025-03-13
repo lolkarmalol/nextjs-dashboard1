@@ -7,6 +7,8 @@ import { lusitana } from "../ui/fonts";
 import { RevenueChartSkeleton } from "../ui/skeletons";
 
 export default async function Page() {
+  const revenue = await fetchRevenue()
+  const latestInvoices = await fetchLatestInvoices(); 
   const {
     numberOfInvoices,
     numberOfCustomers,
